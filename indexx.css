@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+.hdr {
+    background: radial-gradient(orange,yellow,orange);
+}
+span h2 b{
+   display:flex;
+   place-content:center;
+}
+nav {
+    border:2px double red;
+    border-radius:6px;
+    box-shadow:0px 0px 2px 1px red;
+    position: relative;
+    background:linear-gradient(to right,yellow,orange,yellow);
+}
+nav ul li{
+    font-size: large;
+    border:1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: azure;
+}
+nav ul li:hover{
+    border:2px solid red;
+    border-radius:10px;
+    color:yellow;
+    background-color: rgba(0, 0, 255, 0.192);
+}
+@media (max-width:765px){
+    nav ul li{
+        margin:2px 5px 2px 5px;
+        border:none;
+        border-radius:0px;
+        font-weight: bold;
+        clear:left;
+        background-color: rgba(0, 0, 0, 0.062);
+    }
+    nav ul li:hover{
+        border:2px solid orange;
+        border-radius:0px;
+        background-color:rgba(0,0,0,0.205);
+    }
+}
+#gi{
+    display: flex;
+   place-content: center;
+   color:black;
+   font-size: large;
+   font-weight: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#cntu{
+    
+    color:white;
+    padding:10px;
+    
+    justify-content: space-around;
+}
+.cntuson{
+   border:2px solid red;
+   border-radius: 10px;
+    color:white;
+    padding:10px;
+    text-align: center;
+}
+.feeb{
+    background: linear-gradient(orange,yellow,orange);
+    margin:3px;
+    padding:5px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+.feeb h3{
+    color:blue;
+    font-size: x-large;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+#abt{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    font-weight:bold;
+}
+.btn{
+    margin:3px;
+}
+#notesa{
+    display: grid;
+    place-items: center; 
+    text-align: center;
+}
+ .grid-container{
+    display:grid;
+    grid-auto-columns: minmax(10px, auto);
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-auto-flow:dense; 
+    place-items: center; 
+    text-align: center;
+} 
+#mg{
+    width:250px;
+    height:175px;
+    margin:2%;
+    padding:2%;
+    box-shadow: 0px 0px 5px 2px black;
+}
+#mg:hover{
+    width:255px;
+    height:180px;
+    box-shadow: 1px 1px 10px 3px rgb(21, 5, 249);
+}
+div>input{
+    margin:10px;
+}
+div>textarea{
+    margin:10px;
+}
