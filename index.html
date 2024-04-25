@@ -2,128 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R20 Cse Notes</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-    <link rel="stylesheet" href="indexx.css">
-</head>
-<body>
-    <header>
-        <div class="container hdr">
-            <div class="row">
-                <div class="col">
-                    <span>
-                        <h2>
-                            <b>Notes by CSE students </b>
-                        </h2>
-                    </span>            
-                </div>
-            </div>    
-        </div> 
-    </header>                
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#croppcontent">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Notes</a>
-                </div>
-                <div class="collapse navbar-collapse" id="croppcontent">
-                    <ul  class="nav navbar-nav">
-                        <li class="active"><a href="#">Home<span class="sr-only"></span></a></li>
-                        <li><a href="#">Notes</a></li>
-                        <li><a href="#abt">About</a></li>
-                        <li><a href="#cntu">Contact us</a></li>
-                    </ul>
-                </div>
-               
-            </div>
-        </nav>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
     
-        <div class="row">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-8 ">
-                    <center><h3>CSE 2-2 Semister</h3></center>
-                    <div class="grid-container" id="notesa">
-                        <div class="grid-item">
-                            <a><img id="mg" class="grid-item" src="os.jpg" alt="Operating System">
-                            <br><b>Operating System</b><br></a>
-                        </div>
-                        <div class="grid-item">
-                            <a><img  id="mg" src="se.jpg" alt="Software Engineering"><br>
-                            <b>Software Engineering</b><br></a>
-                        </div>
-                        <div class="grid-item">
-                            <a><img id="mg" src="dbms.jpg" alt="DataBase Management Systems"><br>
-                            <b>DataBase Mangaement Systems</b></img></a>
-                        </div>
-                    </div>
+    <title>My Learning Journey</title>
+</head>
+<body id="home">
+    <!-- Header section -->
+    <header class="header text-center">
+        <h1>Welcome to My Learning Journey</h1>
+        <p>Explore my day-to-day learning experiences and topics I've explored.</p>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav class="navbar navbar-expand-md  navbar-dark bg-dark ">
+        <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <a class="navbar-brand text-warning " href="#home">CSK</a>
+
+            <ul class="navbar nav">
+                <li class="nav-item"><a class="nav-link" href="#learning-journal">Learning Journal</a></li>
+                <li class="nav-item"><a class="nav-link" href="#topics-learned">Topics Learned</a></li>
+                <li class="nav-item"><a class="nav-link" href="#notes">Notes</a></li> <!-- Added Notes section -->
+                <!-- Optional: <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <main >
+        <section class="section" id="learning-journal">
+            <h2 class="text-lg text-center font-weight-bold m-2">Learning Journal</h2>
+            <!-- Introduction about Learning Journal -->
+            <section id="learning-journal-intro ">
+                <p class="text-center">Welcome to the Learning Journal section of My Learning Journey. Here, I will document my day-to-day learning experiences, insights, and reflections on various topics.</p>
+                <div class="intro-btn">
+                    <button onclick="goToPage('learningjournal.html#frontend')" class="btn btn-primary category-button">Frontend Development</button>
+                    <button onclick="goToPage('learningjournal.html#backend')" class="btn btn-secondary category-button">Backend Development</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-success category-button">Server API</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-info category-button">Database Management</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-warning category-button">Version Control</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-danger category-button">Python Development</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-success category-button">Editing</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-dark category-button">Project Management</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-light category-button">Continuous Learning</button>
+                    <button onclick="goToPage('learningjournal.html')" class="btn btn-outline-secondary category-button">Reflections & Insights</button>
                 </div>
+            </section>
+
+        </section>
+
+        
+        <!-- Notes section -->
+        <section class="section" id="notes">
+            <h2 class="text-lg  text-center font-weight-bold m-3">Notes</h2>
+            <p class="text-xs text-center m-1">Here you can write and store your personal notes for reference:</p>
+            <div class="notess">
+                <button class="btn btn-success"> <img id="notes-img" src="images/docker.png" alt=""> </button>
+                <button class="btn btn-warning"> <img  id="notes-img"src="images/python.jpg" alt=""> </button>
+                <button class="btn btn-info"> <img id="notes-img" src="images/flask.png" alt=""> </button>
+                <button class="btn btn-danger"><img id="notes-img" src="images/angular.jpg" alt=""></button>
             </div>
-        </div>
-        <div class="row" id="abt">
-            <div class="col">
-                <center><h3>About</h3></center>
-                <ul>
-                <li class="glyphicon glyphicon-arrow-right">  This website has a Notes of CSE.</li><br>
-                <li class="glyphicon glyphicon-arrow-right">  This content is based on R20 syllabus.</li><br>
-                <li class="glyphicon glyphicon-arrow-right">  Notes will be organized by topic wise.</li><br>
-                <li class="glyphicon glyphicon-arrow-right">  The imp questions also be marked according to old question papers and lectulers </li><br>
-                <li class="glyphicon glyphicon-arrow-right">  This website is made my students.   </li><br>
-                <li class="glyphicon glyphicon-arrow-right">  The content was held in this websites is prepared by students of their own.</li><br>
-                <li class="glyphicon glyphicon-arrow-right">  The notes are gathered from Standard books , Lectlure Notes and some genuine websites.</li><br>
-                <li class="glyphicon glyphicon-arrow-right">  The studets who are intersted can join  by contacting us to access this website.</li>  <br>
-                </ul>  
-            </div>
-        </div>
-        <div class="row feeb">
-            <center><h3>Contact Us</h3></center>
-            <div class="col-sm-6 cntuson"> 
-                <form>
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <center style="font-size: 1em; color:black;">FeedBack</center>
-                        <input placeholder="Name" type="text" class="form-control">
-                        <input placeholder="Roll NO" type="text" class="form-control">
-                        <label style="color:black;">Description:</label><textarea  class="form-control"> </textarea>
-                    </div> 
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <center><button type="submit" class="btn btn-default">Submit</button></center>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </form>
-            </div>
-            <div class="col-sm-6" id="cntu" >
-               <span id="gi">
-                   <center><img src="gittt.jpg" width="30px" height="30px"> <br><b>GitHub</b><br><a>https://github.com/LeBoysHub</a><br><a>https://github.com/sivakumar6678</a></center> 
-               </span>
-               <span id="gi">
-                    <center><img src="utube.png" width="30px" height="30px"> <br>  <b>Youtube</b></span><br><a>btechbarberians</a></center>  
-            </div>
-        </div>
-    </div>
+        </section>
+        <section  class="section" id="topics-learned">
+            <h2 class="text-lg font-weight-bold m-2 text-center">Topics Learned</h2>
+            <!-- List of topics learned -->
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">CSS</li>
+                <li class="list-group-item">JavaScript</li>
+                <li class="list-group-item">Bootstrap</li>
+                <li class="list-group-item">Git & GitHub</li>
+                <li class="list-group-item">Python</li>
+                <li class="list-group-item">SQL</li>
+                <li class="list-group-item">Docker</li>
+                <li class="list-group-item">Python</li>
+                <li class="list-group-item">Flask</li>
+                <li class="list-group-item">Php</li>
+
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer section -->
     <footer>
-        <div>
-            <div class="row"><hr>
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                     Copyrights &copy   jntuacek notes prepared by students
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-        </div>
+        <p>© 2024 Your Sivakumar. All rights reserved.</p>
     </footer>
+
+<script>
+   function goToPage(page) {
+        window.location.href = page;
+    }
+
+</script>
 </body>
 </html>
