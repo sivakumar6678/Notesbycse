@@ -103,6 +103,16 @@ ul li{
 
 /* Frontend part */
 
+section>article>h2{
+    font-size: 2.5rem;
+    /* background: #000; */
+    padding:1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+    text-shadow: 0 0 20px #3bff05;
+
+}
 .sections{
     min-height: 100vh;
 }
