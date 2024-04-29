@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Development</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <ul>
+                <li> To stop or kill the port:
+                    <section class="cmd">
+                        <code>lsof -i: {portnumber}</code>
+                    </section>
+                </li>
+            </ul>
+            <ol>
+                <li>i am getting error in terminal after updating to fedora 40 version </li>
+                <ul>
+
+                    <li>i lost my default terminal and got the bash terminal and i am fixed it by : 
+                        <section class="cmd">
+                            <li>Ah, I see what you mean now. You want to change the prompt in the default Bash terminal. You can customize the Bash prompt by modifying the PS1 environment variable. Here's how you can change it:</li>
+                            <ul>
+                                <li>Open your ~/.bashrc file in a text editor. This file contains configurations for your Bash shell.</li>
+                                <li>Find the line that sets the PS1 variable. It usually looks something like this:
+                                <code>PS1='\[\e]0;\u@\h: \w\a\]\n\[\e[32m\]\u@\h\[\e[0m\] \[\e[33m\]\w\[\e[0m\]\n\$ '
+                                </code>
+                                This line defines the default Bash prompt.
+                            </li>
+                            <li>Modify the value assigned to PS1 to change the prompt. For example, if you want a simple prompt without any extra information, you can set PS1 to something like this:
+                                <code>PS1='\$ '
+                                </code>
+                                This will change the prompt to just $.
+                            </li>
+                            <li>Save the file and exit the text editor.</li>
+                            <li>Save the file and exit the text editor.
+                                <code>source ~/.bashrc</code>
+                                After making these changes, your Bash prompt should be updated according to the modifications you made to the PS1 variable. Feel free to customize it further according to your preferences.
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </ol>
+        <ol>
+            <ul>
+                <li>If you couldn't find the line in your ~/.bashrc file that sets the PS1 variable, you can add it yourself. Here's how you can do it:</li>
+                <li>Open your ~/.bashrc file in a text editor. If the file doesn't exist, you can create it.</li>
+                <li>Add the following line to set the PS1 variable:
+                    <code>PS1='\$ '</code> This will set the prompt to just $.
+                </li>
+                <li>Save the file and exit the text editor.</li>
+                <li>To apply the changes, either reopen your terminal or run the following command:
+                    <code>source ~/.bashrc</code>
+                    After doing this, your Bash prompt should be updated to display just $. You can modify the PS1 variable further to customize the prompt according to your preferences.
+                </li>
+            </ul>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
+

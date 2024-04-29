@@ -3,81 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #007bff; /* Bootstrap primary color */
-        }
-        article {
-            margin-bottom: 40px;
-        }
-        /* Add more custom styles as needed */
-    </style>
+    <title>Angular Basics</title>
+    <link rel="stylesheet" href="angular.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center mb-4">Learning Journal</h1>
-        
-        <!-- Your existing learning journal content here -->
-
-        <!-- Notes Section -->
-        <h2 class="text-center mb-3">My Notes</h2>
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="form-group">
-                    <textarea id="noteInput" class="form-control" rows="3" placeholder="Enter your note"></textarea>
-                </div>
-                <button onclick="addNote()" class="btn btn-primary">Add Note</button>
-            </div>
+    <nav class="navbar navbar-expand-md fixed-top  ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Angular</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#basic">Basics</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a >Errors and Debug</a> -->
+              <a class="nav-link " href="#" data-toggle="collapse" data-target="#error">Error</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
         </div>
-        <div id="noteList" class="mt-4">
-            <!-- Notes will be added here -->
+      </nav>
+    
+      <h1 class="text-center mb-4 " style="margin-top:100px;">Angular Basics</h1>
+    <div class="container">
+        <div id="error" class="collapse">
+            <h2>Errors and fixed</h2>
+            <section>
+                <ul>
+                    <li>Make sure all component.ts has standalone and imports in the decorator</li>
+                    <li>import all componets which we want to use in that component</li>
+                    <li>Make sure all the components are declared in the app-routing.module.ts</li>
+                    <li>In some reference projects and youtube tutorials there will be app.module.ts and app-routing.module.ts and by default the app.routes.ts will be defined</li>
+                    <li>In app.routes.ts we have to declare routing to that compoents</li>
+                    <li>In app.module.ts there will be all components are declared in NgModule and it will be used any where in that project</li>
+                    <li>By declaring the app-routing.module.ts we have to declare routes and as well as moduel declarations.</li>
+                    <li>Import commonmodule of ngif</li>
+                    <li>Import ReactiveFormModule for ngfor</li>
+                </ul>
+            </section>
+
+
         </div>
     </div>
+    <div class="container-fluid" id="basic">
+        
+        <article>
+            <h2>What is Angular?</h2>
+            <p>Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google. It's widely used for building single-page web applications (SPAs) and dynamic web pages.</p>
+        </article>
 
-    <script>
-        // Load existing notes from localStorage on page load
-        window.onload = function() {
-            const savedNotes = JSON.parse(localStorage.getItem('notes'));
-            if (savedNotes) {
-                const noteList = document.getElementById('noteList');
-                savedNotes.forEach(function(note) {
-                    const noteItem = document.createElement('div');
-                    noteItem.classList.add('alert', 'alert-info');
-                    noteItem.textContent = note;
-                    noteList.appendChild(noteItem);
-                });
-            }
-        };
+        <article>
+            <h2>Key Concepts</h2>
 
-        // Function to add a note
-        function addNote() {
-            const noteInput = document.getElementById('noteInput');
-            const newNote = noteInput.value.trim();
-            if (newNote !== '') {
-                const noteList = document.getElementById('noteList');
-                const noteItem = document.createElement('div');
-                noteItem.classList.add('alert', 'alert-info');
-                noteItem.textContent = newNote;
-                noteList.appendChild(noteItem);
+            <article>
+                <h3>Components</h3>
+                <p>Components are the basic building blocks of Angular applications. Each component consists of a TypeScript class that defines the component's behavior and properties, along with an HTML template that defines the component's view. Components are reusable, encapsulated, and composable, making them ideal for building complex user interfaces.</p>
+            </article>
 
-                // Save notes to localStorage
-                let savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
-                savedNotes.push(newNote);
-                localStorage.setItem('notes', JSON.stringify(savedNotes));
+            <article>
+                <h3>Templates</h3>
+                <p>Templates in Angular are HTML files that define the user interface of a component. Templates can include data bindings, which allow components to interact with the template's HTML, and structural directives, which control the layout and structure of the DOM based on conditions.</p>
+            </article>
 
-                noteInput.value = '';
-            }
-        }
-    </script>
+            <article>
+                <h3>Data Binding</h3>
+                <p>Data binding in Angular enables communication between the component class and its template. Angular supports various types of data binding, including interpolation, property binding, event binding, and two-way binding. These mechanisms allow you to keep the UI in sync with the application state and user input.</p>
+            </article>
+
+            <article>
+                <h3>Services and Dependency Injection</h3>
+                <p>Services are reusable components in Angular that encapsulate logic and data that can be shared across multiple components. Angular's dependency injection system provides a way to create and manage service instances, making it easy to inject dependencies into components and other services.</p>
+            </article>
+
+            <article>
+                <h3>Modules</h3>
+                <p>Modules in Angular are containers for organizing related components, directives, pipes, and services. Each Angular application has at least one root module, which provides the bootstrap mechanism for launching the application. Modules help to keep the application modular, maintainable, and scalable.</p>
+            </article>
+        </article>
+
+        <div class="getstarted">
+            <h2>Get Started</h2>
+            <ul>
+                <li>To start building Angular applications, you need to have Node.js and npm (Node Package Manager) installed on your system.</li>
+                <li>You can install Angular CLI (Command Line Interface) globally using npm:
+                    <section class="commands">
+                        npm install -g @angular/cli
+                    </section>
+                </li>
+                <li>Create a new Angular project:
+                    <section class="commands">
+                        ng new my-app
+                    </section>
+                </li>
+                <li>Navigate into the project directory:
+                    <section class="commands">
+                        cd my-app
+                    </section>
+                </li>
+                <li>Start the development server:
+                    <section class="commands">
+                        ng serve --open
+                    </section>
+                </li>
+                <li>Create a new component:
+                    <section class="commands">
+                        ng generate component my-component
+                    </section>
+                </li>
+            </ul>
+            <div class="components" id="components">
+                <h2>Components and Templates</h2>
+                <ul>
+                    <li>Components are the basic building blocks of Angular applications.</li>
+                    <li>Each component consists of a TypeScript class and an HTML template.</li>
+                    <li>Templates define the user interface of a component.</li>
+                    <li>Data bindings allow components to interact with the template's HTML.</li>
+                    <li>Examples 
+                        <ul>
+                            <li>Interpolation: {{ title }}</li>
+                            <li>Property binding: [src]="imageUrl"</li>
+                            <li>Event binding: (click)="onButtonClick()"</li>
+                            <li>Two-way binding: [(ngModel)]="name"</li>
+                        </ul>
+                    </li>
+                    <li>Exmples of each component 
+                        <pre >
+    import { Component } from '@angular/core';
+    @Component({
+        selector: 'app-root',
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+        title = 'my-app';
+    }
+                        </pre>   
+                    </li>
+                </ul>
+            </div>
+            <div class="services" id="services">
+                <h2>Services</h2>
+                <ul>
+                    <li>Services are reusable components in Angular.</li>
+                    <li>Services encapsulate logic and data that can be shared across multiple components.</li>
+                    <li>Services are typically used to fetch data from a server, perform authentication, or handle other business logic.</li>
+                    <li>Services in Angular are TypeScript classes that are responsible for implementing application logic or interacting with external data sources.</li>
+                    <li>Services can be injected into components or other services using Angular's dependency injection system.</li>
+                    <li>Examples
+<pre>
+    import { Injectable } from '@angular/core';
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class MyService {
+    constructor() { }
+
+    // Example method
+    getData(): string {
+        return 'Hello from MyService!';
+    }
+    }
+</pre>
+                    </li>
+                </ul>
+            </div>
+            <div class="modules" id="modules">
+                <h2>Modules</h2>
+                <ul>
+                    <li>Modules in Angular are used to organize the application into cohesive blocks of functionality.</li>
+                    <li>Each Angular application has at least one root module, conventionally named AppModule.</li>
+                    <li>Modules are defined using the @NgModule decorator and can import other modules, declare components, provide services, and more.</li>
+                    <li>Examples of simple module
+<pre>
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+</pre>
+                    </li>
+                </ul>
+            </div>
+            <div class="routing" id="routing">
+                <h2>Routing</h2>
+                <ul>
+                    <li>Angular provides a powerful routing mechanism for navigating between different views or pages in a single-page application.</li>
+                    <li>Routing is configured using the RouterModule and Routes classes from @angular/router.</li>
+                    <li>Routes define the mapping between URLs and components.</li>
+                    <li>Example of routing configuration:
+<pre>
+    import { NgModule } from '@angular/core';
+    import { Routes, RouterModule } from '@angular/router';
+    import { HomeComponent } from './home.component';
+    import { AboutComponent } from './about.component';
+
+    const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent }
+    ];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+
+</pre>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
