@@ -30,37 +30,36 @@
                                 <code>PS1='\[\e]0;\u@\h: \w\a\]\n\[\e[32m\]\u@\h\[\e[0m\] \[\e[33m\]\w\[\e[0m\]\n\$ '
                                 </code>
                                 This line defines the default Bash prompt.
-                            </li>
-                            <li>Modify the value assigned to PS1 to change the prompt. For example, if you want a simple prompt without any extra information, you can set PS1 to something like this:
-                                <code>PS1='\$ '
-                                </code>
-                                or
-                                <code>PS1='[\u@\h \W]\$ '</code>
-                                This will change the prompt to just $.
-                            </li>
-                            <li>Save the file and exit the text editor.</li>
-                            <li>Save the file and exit the text editor.
-                                <code>source ~/.bashrc</code>
-                                After making these changes, your Bash prompt should be updated according to the modifications you made to the PS1 variable. Feel free to customize it further according to your preferences.
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-            </ul>
-        </ol>
-        <ol>
-            <ul>
-                <li>If you couldn't find the line in your ~/.bashrc file that sets the PS1 variable, you can add it yourself. Here's how you can do it:</li>
-                <li>Open your ~/.bashrc file in a text editor. If the file doesn't exist, you can create it.</li>
-                <li>Add the following line to set the PS1 variable:
-                    <code>PS1='\$ '</code> This will set the prompt to just $.
-                </li>
-                <li>Save the file and exit the text editor.</li>
-                <li>To apply the changes, either reopen your terminal or run the following command:
-                    <code>source ~/.bashrc</code>
-                    After doing this, your Bash prompt should be updated to display just $. You can modify the PS1 variable further to customize the prompt according to your preferences.
-                </li>
-            </ul>
+                                </li>
+                                <li>Modify the value assigned to PS1 to change the prompt. For example, if you want a simple prompt without any extra information, you can set PS1 to something like this:
+                                    <code>PS1='\$ '</code>
+                                    or
+                                    <code>PS1='[\u@\h \W]\$ '</code>
+                                    This will change the prompt to just $.
+                                </li>
+                                <li>Save the file and exit the text editor.</li>
+                                <li>Save the file and exit the text editor.
+                                    <code>source ~/.bashrc</code>
+                                    After making these changes, your Bash prompt should be updated according to the modifications you made to the PS1 variable. Feel free to customize it further according to your preferences.
+                                </li>
+                            </ul>
+                        </section>
+                    </li>
+                </ul>
+            </ol>
+            <ol>
+                <ul>
+                    <li>If you couldn't find the line in your ~/.bashrc file that sets the PS1 variable, you can add it yourself. Here's how you can do it:</li>
+                    <li>Open your ~/.bashrc file in a text editor. If the file doesn't exist, you can create it.</li>
+                    <li>Add the following line to set the PS1 variable:
+                        <code>PS1='\$ '</code> This will set the prompt to just $.
+                    </li>
+                    <li>Save the file and exit the text editor.</li>
+                    <li>To apply the changes, either reopen your terminal or run the following command:
+                        <code>source ~/.bashrc</code>
+                        After doing this, your Bash prompt should be updated to display just $. You can modify the PS1 variable further to customize the prompt according to your preferences.
+                    </li>
+                </ul>
             </ol>
         </section>
     </div>

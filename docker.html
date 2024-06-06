@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker and Kubernetes Course</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e9/xPL5sLdJ8kfdtdzfM" crossorigin="anonymous">
+    <link rel="stylesheet" href="docker.css">
+    
+</head>
+<body>
+    <h1>Docker and Kubernetes Course</h1>
+    <h2>Docker</h2>
+    <div class="note">
+        <h3>What is Docker?</h3>
+        <p>Docker is a containerization platform that allows you to run applications in isolated environments called containers. Containers are lightweight and portable, and they provide a consistent and reliable way to deploy applications.</p>
+    </div>
+    <div class="note">
+        <h3>Dockerfile</h3>
+        <ul>
+            <li><code>FROM</code>: defines the base image use to start the build process</li>
+            <li><code>ADD</code>: Copies the files from a source on the host into the container own filesystem at the set destination and as well as urls also added but copy cant do that</li>
+            <li><code>COPY</code>: same as ADD</li>
+            <li><code>CMD</code>: can be used for executing a specific command with in the container</li>
+            <li><code>ENTRYPOINT</code>: set a default application to be used every time a container is created with the image</li>
+            <li><code>ENV</code>: set environment variables</li>
+            <li><code>EXPOSE</code>: set the specific port to enable networking between container and to the outside</li>
+            <li><code>MAINRAINER</code>: defines full name and email address of image creater</li>
+            <li><code>RUN</code>: it is central executive directory for Docker files</li>
+            <li><code>USER</code>: set the UID which is to run the containert</li>
+            <li><code>VOLUME</code>: used to enable access from the container to a dirctory on the host machine</li>
+            <li><code>WORKDIR</code>: set the path where the command, defines the CMD is to be executed</li>
+            <li><code>LABEL</code>: allows you to add a label to your docker image</li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Docker Commands</h3>
+        <ul>
+            <li><code>docker build -t sivakumar6678/netflichomepage.</code></li>
+            <li><code>docker run -dt --name netflichomepage -p 8080:80 428b5d521a4e</code></li>
+            <li><code>docker tag sivakumar6678/netflichomepage sivakumar6678/netflixhomepageclone:v1</code></li>
+            <li><code>docker ps</code></li>
+            <li><code>docker stop mycontainer</code></li>
+            <li><code>docker rm mycontainer</code></li>
+            <li><code>docker images</code></li>
+            <li><code>docker build -t myimage.</code></li>
+            <li><code>docker tag myimage:latest myimage:v1</code></li>
+            <li><code>docker push myimage:latest</code></li>
+            <li><code>docker pull myimage:latest</code></li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Volumes</h3>
+        <ul>
+            <li><code>docker volume create “name”</code></li>
+            <li><code>docker inspect volume bharatintern</code></li>
+            <li><code>docker run -it –name=name –mount source=name,destination=/data “centos”</code></li>
+            <li><code>docker run -it –name “name” -v “name”:/data “container name”</code></li>
+            <li><code>docker run -it --volumes-form “name” –name “name” “container name” /bin/bash</code></li>
+            <li><code>docker run -it --name srv05 -v “$(pwd)”:/data1 centos</code></li>
+            <li><code>docker volume rm “volume is “</code></li>
+            <li><code>docker volume prune</code>: will delete a volumes which is not in containers</li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Login Docker using Terminal</h3>
+        <p><code>sudo docker login</code></p>
+    </div>
+    <h2>Kubernetes</h2>
+    <div class="note">
+        <h3>Introduction to Kubernetes</h3>
+        <p>Kubernetes is a container orchestration platform due to managing more no of container it is risk and difficult to manage the docker swarm and kubernetes are the container orchestration tools. It is developed and maintained by Google. It does not provide CI/CD.</p>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Capabilities</h3>
+        <ul>
+            <li>Automated rollouts and rollbacks</li>
+            <li>Storage orchestration</li>
+            <li>Horizontal scaling</li>
+            <li>Automated bin packing</li>
+            <li>Secret and configuration management</li>
+            <li>IPv4/IPv6 addresses</li>
+            <li>Batch execution</li>
+            <li>Self-healing</li>
+            <li>Service discovery and load balancing</li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Architecture</h3>
+        <p>Cluster: A group of machines (nodes) working together to run containerized applications.</p>
+        <ul>
+            <li>Control Plane (Brain): Manages the desired state of the cluster and makes decisions.</li>
+            <li>Worker Nodes (Machines): Run the actual applications (containers).</li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Objects</h3>
+        <p>Kubernetes Objects: Persistent entities with identity, state, and behavior (like real-world objects).</p>
+        <ul>
+            <li>Pods: The smallest deployable unit, containing one or more containers.</li>
+            <li>Namespaces: Isolate groups of resources within a cluster (e.g., by team, project).</li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Deployment</h3>
+        <p>A Deployment is a way to manage the rollout of new versions of an application.</p>
+        <ul>
+            <li><code>kubectl create deployment nginx-deployment --image=nginx:1.14.2</code></li>
+            <li><code>kubectl get deployments</code></li>
+            <li><code>kubectl describe deployment nginx-deployment</code></li>
+            <li><code>kubectl delete deployment nginx-deployment</code></li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Service</h3>
+        <p>A Service is an abstraction over a set of Pods that defines a network interface and a set of endpoint policies.</p>
+        <ul>
+            <li><code>kubectl expose deployment nginx-deployment --type=LoadBalancer --port=80</code></li>
+            <li><code>kubectl get svc</code></li>
+            <li><code>kubectl describe svc nginx-deployment</code></li>
+            <li><code>kubectl delete svc nginx-deployment</code></li></ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes Persistent Volumes</h3>
+        <p>A Persistent Volume (PV) is a piece of networked storage that has been provisioned by an administrator.</p>
+        <ul>
+            <li><code>kubectl create pv pv-name --capacity=5Gi --access-modes=RWX --storage-class=local-storage</code></li>
+            <li><code>kubectl get pv</code></li>
+            <li><code>kubectl describe pv pv-name</code></li>
+            <li><code>kubectl delete pv pv-name</code></li>
+        </ul>
+    </div>
+    <div class="note">
+        <h3>Kubernetes StatefulSets</h3>
+        <p>A StatefulSet is a way to manage stateful applications, such as databases.</p>
+        <ul>
+            <li><code>kubectl create statefulset mysql --image=mysql:5.7 --replicas=3</code></li>
+            <li><code>kubectl get statefulsets</code></li>
+            <li><code>kubectl describe statefulset mysql</code></li>
+            <li><code>kubectl delete statefulset mysql</code></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    margin:0.5rem 1rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  
+  code {
+    font-family: 'Monaco', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #110ddf;
+  }
+  
+  /* Note Styles */
+  
+  .note {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .note:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .note h3 {
+    margin-top: 0;
+  }
+  
+  .note ul {
+    padding-left: 20px;
+  }
+  
+  .note li {
+    margin-bottom: 10px;
+  }
+  
+  .note code {
+    font-size: 12px;
+  }
+  
+  /* Docker Styles */
+  
+  .docker {
+    background-color: #337ab7;
+    background-image: linear-gradient(to bottom, #337ab7, #265a88);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .docker h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+  
+  .docker ul {
+    padding-left: 20px;
+  }
+  
+  .docker li {
+    margin-bottom: 10px;
+  }
+  
+  .docker code {
+    font-size: 12px;
+    background-color: #337ab7;
+    color: #fff;
+  }
+  
+  /* Kubernetes Styles */
+  
+  .kubernetes {
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .kubernetes h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+  
+  .kubernetes ul {
+    padding-left: 20px;
+  }
+  
+  .kubernetes li {
+    margin-bottom: 10px;
+  }
+  
+  .kubernetes code {
+    font-size: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  /* Animations */
+  
+  .note {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .docker {
+    animation: slide-in-from-left 1s ease-in-out;
+  }
+  
+  .kubernetes {
+    animation: slide-in-from-right 1s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-from-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-from-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 768px) {
+    .note, .docker, .kubernetes {
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .note, .docker, .kubernetes {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }

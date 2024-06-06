@@ -150,7 +150,6 @@ article .row:hover{
     border:5px double #000;
     transition: 1s ease;
     /* scale: 1.015; */
-    animation: backgroundAnimation 0.5s infinite alternate; /* Change the duration as needed */
 }
 
 
