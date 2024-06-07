@@ -8,60 +8,122 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/learning.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/tools.css">
 </head>
 <body>
     <div class="container">
         <h1>Tools used for development</h1>
-        <div class="html">
+
+        <section class="html">
             <h2>Vs code extensions</h2>
-            <dd>Live server</dd>
-            <dl>used for executing page in broweser automatically with refreshing it and it is access in port <b>5500</b> and it is refreshed by saving file in code.</dl>
-            <dl>Live Server is a development tool that allows you to create a local web server for your HTML, CSS, and JavaScript files. It automatically refreshes the web page whenever you make changes to your code, providing a seamless development experience. With Live Server, you can view your web page in real-time without having to manually refresh the browser. It is commonly used during web development to speed up the development process and improve productivity. Live Server is easy to set up and can be installed as an extension in popular code editors like Visual Studio Code.
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#liverserver">
+                        <dd>Live server</dd>
+                 </a>
+                  </div>
+                  <div id="liverserver" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <dl>used for executing page in broweser automatically with refreshing it and it is access in port <b>5500</b> and it is refreshed by saving file in code.</dl>
+                        <dl>Live Server is a development tool that allows you to create a local web server for your HTML, CSS, and JavaScript files. It automatically refreshes the web page whenever you make changes to your code, providing a seamless development experience. With Live Server, you can view your web page in real-time without having to manually refresh the browser. It is commonly used during web development to speed up the development process and improve productivity. Live Server is easy to set up and can be installed as an extension in popular code editors like Visual Studio Code.</dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#livepreview">
+                        <dd>Live Preview</dd>
+                    </a>
+                  </div>
+                  <div id="livepreview" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <dl>It is a microsoft local server which is powerful tools when modifying the changes it will autoamatically refreshing browers without human interaption and it is run in port <b>3000</b> it didnt require saving and refreshing code manually</dl>
+                        <dl>In the context of web development, "Live Preview" refers to a feature that allows developers to see the real-time rendering of their code changes without having to manually refresh the web page. It provides a convenient way to preview and test the appearance and functionality of a web page as you make modifications to the code. This can be especially useful when working on responsive designs or interactive elements. Live Preview typically updates the rendered output as you type or save your changes, providing immediate feedback and speeding up the development process.</dl>                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#endtag">
+                        <dd>HTML End Tag Labels</dd>
+                    </a>
+                  </div>
+                  <div id="endtag" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <dl> It adds labels to the closing tags of HTML elements, making it easier to identify and navigate through the structure of your HTML code. This extension helps improve code readability and reduces the chances of making mistakes when working with complex HTML documents. It is a useful tool for web developers who want to streamline their HTML coding process and ensure well-structured markup. </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#highlight">
+                          <dd>Highlight Matching Tag</dd>
+                      </a>
+                    </div>
+                    <div id="highlight" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                          <dl>The "Highlight Matching Tag" feature in HTML is a functionality that visually identifies the opening and closing tags of an HTML element. When you place the cursor on an opening or closing tag, the corresponding tag will be highlighted, making it easier to identify the structure of your HTML code. This feature is particularly useful when working with complex HTML documents that contain nested elements. By highlighting the matching tag, it helps you ensure that your tags are properly balanced and nested correctly. This feature improves code readability and reduces the chances of introducing syntax errors in your HTML markup.</dl>
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#rename">
+                          <dd>Auto Rename Tag</dd>
+                      </a>
+                    </div>
+                    <div id="rename" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                          <dl>Auto Rename Tag is a feature in Visual Studio Code that automatically renames the closing tag of an HTML element when you rename the opening tag. This feature helps maintain consistency and accuracy in your HTML code by ensuring that the opening and closing tags are always in sync. When you change the name of an opening tag, the corresponding closing tag is updated automatically to reflect the change. This saves you time and effort by eliminating the need to manually update the closing tag whenever you rename an element. Auto Rename Tag is a useful tool for web developers who want to streamline their coding process and reduce the chances of introducing errors in their HTML markup.</dl>
+                      </div>
+                    </div>
+                
+              
+            </div> 
+            
+            
 
-            </dl>
-            <dd>Live Preview</dd>
-            <dl>It is a microsoft local server which is powerful tools when modifying the changes it will autoamatically refreshing browers without human interaption and it is run in port <b>3000</b> it didnt require saving and refreshing code manually</dl>
-            <dl>In the context of web development, "Live Preview" refers to a feature that allows developers to see the real-time rendering of their code changes without having to manually refresh the web page. It provides a convenient way to preview and test the appearance and functionality of a web page as you make modifications to the code. This can be especially useful when working on responsive designs or interactive elements. Live Preview typically updates the rendered output as you type or save your changes, providing immediate feedback and speeding up the development process.</dl>
-            <dd>HTML End Tag Labels</dd>
-            <dl> It adds labels to the closing tags of HTML elements, making it easier to identify and navigate through the structure of your HTML code. This extension helps improve code readability and reduces the chances of making mistakes when working with complex HTML documents. It is a useful tool for web developers who want to streamline their HTML coding process and ensure well-structured markup. </dl>
-            <dd>Highlight Matching Tag</dd>
-            <dl>The "Highlight Matching Tag" feature in HTML is a functionality that visually identifies the opening and closing tags of an HTML element. When you place the cursor on an opening or closing tag, the corresponding tag will be highlighted, making it easier to identify the structure of your HTML code. This feature is particularly useful when working with complex HTML documents that contain nested elements. By highlighting the matching tag, it helps you ensure that your tags are properly balanced and nested correctly. This feature improves code readability and reduces the chances of introducing syntax errors in your HTML markup.</dl>
-            <dd>Auto Rename Tag</dd>
-            <dl>Auto Rename Tag is a feature in Visual Studio Code that automatically renames the closing tag of an HTML element when you rename the opening tag. This feature helps maintain consistency and accuracy in your HTML code by ensuring that the opening and closing tags are always in sync. When you change the name of an opening tag, the corresponding closing tag is updated automatically to reflect the change. This saves you time and effort by eliminating the need to manually update the closing tag whenever you rename an element. Auto Rename Tag is a useful tool for web developers who want to streamline their coding process and reduce the chances of introducing errors in their HTML markup.</dl>
+        </section>
 
-        </div>
-
-        <div class="css">
+        <section class="css">
             <h1>Css libraries and sitees which we can refer</h1>
             <div class="list-group">
-                <a href="https://Shots.so" class="list-group-item list-group-item-action">Shots</a>
-                <a href="https://Uiverse.io" class="list-group-item list-group-item-action">Uiverse</a>
-                <a href="https://Huemint.com" class="list-group-item list-group-item-action">Huemint</a>
-                <a href="https://Coolors.co" class="list-group-item list-group-item-action">Coolors</a>
-                <a href="https://Behance.net" class="list-group-item list-group-item-action">Behance</a>
+                <a href="https://Shots.so" class="list-group-item list-group-item-action"> <b> Shots</b> - Create amazing Mockups</a>
+                <a href="https://Uiverse.io" class="list-group-item list-group-item-action"> <b> Uiverse</b> - Open-Source UI elements for any project</a>
+                <a href="https://Huemint.com" class="list-group-item list-group-item-action"> <b> Huemint</b></a>
+                <a href="https://Coolors.co" class="list-group-item list-group-item-action"> <b> Coolors</b> - The super fast color palettes generator</a>
+                <a href="https://Behance.net" class="list-group-item list-group-item-action"> <b> Behance</b></a>
 
-                <a href="https://freefrontend.com" class="list-group-item list-group-item-action">FreeFrontend</a>
-                <a href="https://cssgradient.com" class="list-group-item list-group-item-action">CSS Gradient</a>
-                <a href="https://uideck.com" class="list-group-item list-group-item-action">UI Deck</a>
-                <a href="https://mycolor.space" class="list-group-item list-group-item-action">Color Space</a>
-                <a href="https://css-tricks.com" class="list-group-item list-group-item-action">CSS Tricks</a>
-                <a href="https://www.gradientmagic.com" class=" list-group-item list-group-item-action">Gradient Magic</a>
+                <a href="https://freefrontend.com" class="list-group-item list-group-item-action"> <b> FreeFrontend</b></a>
+                <a href="https://cssgradient.com" class="list-group-item list-group-item-action"> <b> CSS Gradient</b>  - Say hello to your AI social designer</a>
+                <a href="https://uideck.com" class="list-group-item list-group-item-action"> <b> UI Deck</b>  - Free and Premiusl HTML landing page templete etc themes</a>
+                <a href="https://mycolor.space" class="list-group-item list-group-item-action"> <b> Color Space</b>  - Never waste Hours on finding the perfect color paletter again </a>
+                <a href="https://css-tricks.com" class="list-group-item list-group-item-action"> <b> CSS-Tricks</b> </a>
+                <a href="https://www.gradientmagic.com" class=" list-group-item list-group-item-action"> <b> Gradient Magic</b> </a>
+                <a href="https://www.100dayscss.com" class=" list-group-item list-group-item-action"> <b> 100 days CSS</b> </a>
+                <a href="https://www.dailyui.co/" class=" list-group-item list-group-item-action"> <b> Daily UI</b> </a>
+                <a href="https://www.frontendmentor.io/" class=" list-group-item list-group-item-action"> <b> Frontend mentor - </b> Improve your coding skills by building realistic projects</a>
+                <a href="https://codepen.io/challenges" class=" list-group-item list-group-item-action"> <b> CodePen Challenges</b> </a>
 
+                
             </div> 
 
-        </div>
-        <div class="javascript">
+        </section>
+        <section class="javascript">
             <h1>JavaScript Libraries</h1>
             <div class="list-group">
-                <a href="https://jquery.com" class="list-group-item list-group-item-action">Jquery</a>
-                <a href="https://threejs.org/" class="list-group-item list-group-item-action">Three js - While primarily known for 3d graphics. Three.js also packs a punch when i t comes to animations. whether you're working in 2d or 3d, Three.js has you covered with its powerful animations capabilities.</a>
-                <a href="https://animejs.com" class="list-group-item list-group-item-action">Anime js</a>
-                <a href="https://d3js.org" class="list-group-item list-group-item-action">D3 js</a>
-                <a href="https://velocity.js" class="list-group-item list-group-item-action">Velocity  - <i>Need speed? Look no further thatn velocity.js this animation engine is optimized for performance, making it ideal for creating fast and fluid animations in your web projects</i></a>
+                <a href="https://gsap.com/" class="list-group-item list-group-item-action"> <b>GSAP -</b>  GSAP is the go-to choice for many developers when it comes to animations. with its extensive features and excellent performance, GSAP makes creating complex animations a breeze</a>
+                <a href="https://jquery.com" class="list-group-item list-group-item-action"><b>Jquery -</b> Jquery    </a>
+                <a href="https://threejs.org/" class="list-group-item list-group-item-action"><b>Three js</b>  - While primarily known for 3d graphics. Three.js also packs a punch when i t comes to animations. whether you're working in 2d or 3d, Three.js has you covered with its powerful animations capabilities.</a>
+                <a href="https://animejs.com" class="list-group-item list-group-item-action"><b>Anime js</b>  - if simplicity and flexibility are what you seek, Anime.js is a the way to go . this lightweight library offers a straightforward API for creating smooth animations with ease.</a>
+                <a href="https://d3js.org" class="list-group-item list-group-item-action"><b>D3 js</b> </a>
+                <a href="https://velocity.js" class="list-group-item list-group-item-action"><b>Velocity  -</b>  <i>Need speed? Look no further thatn velocity.js this animation engine is optimized for performance, making it ideal for creating fast and fluid animations in your web projects</i></a>
         </div>
 
-    </div>
+    </section>
 
 </body>
 </html>
