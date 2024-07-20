@@ -42,6 +42,55 @@
                                     <code>source ~/.bashrc</code>
                                     After making these changes, your Bash prompt should be updated according to the modifications you made to the PS1 variable. Feel free to customize it further according to your preferences.
                                 </li>
+                                <li>
+                                    <code>[sivakumar66@fedora ~]$ sudo mount -t ntfs-3g -o uid=1000,gid=1000,umask=022 /dev/sdXn "/run/media/sivakumar66/New Volume"
+ntfs-3g: Failed to access volume '/dev/sdXn': No such file or directory
+
+ntfs-3g 2022.10.3 integrated FUSE 28 - Third Generation NTFS Driver
+		Configuration type 7, XATTRS are on, POSIX ACLS are on
+
+Copyright (C) 2005-2007 Yura Pakhuchiy
+Copyright (C) 2006-2009 Szabolcs Szakacsits
+Copyright (C) 2007-2022 Jean-Pierre Andre
+Copyright (C) 2009-2020 Erik Larsson
+
+Usage:    ntfs-3g [-o option[,...]] <device|image_file> <mount_point>
+
+Options:  ro (read-only mount), windows_names, uid=, gid=,
+          umask=, fmask=, dmask=, streams_interface=.
+          Please see the details in the manual (type: man ntfs-3g).
+
+Example: ntfs-3g /dev/sda1 /mnt/windows
+
+Plugin path: /usr/lib64/ntfs-3g
+
+News, support and information:  https://github.com/tuxera/ntfs-3g/
+[sivakumar66@fedora ~]$ ls -l "/run/media/sivakumar66/New Volume"
+total 0
+[sivakumar66@fedora ~]$  chmod 755 /run/media/sivakumar66/
+chmod: changing permissions of '/run/media/sivakumar66/': Operation not permitted
+[sivakumar66@fedora ~]$ sudo umount "/run/media/sivakumar66/New Volume"
+umount: /run/media/sivakumar66/New Volume: not mounted.
+[sivakumar66@fedora ~]$ sudo ntfsfix /dev/sda6
+Mounting volume... The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+FAILED
+Attempting to correct errors... 
+Processing $MFT and $MFTMirr...
+Reading $MFT... OK
+Reading $MFTMirr... OK
+Comparing $MFTMirr to $MFT... OK
+Processing of $MFT and $MFTMirr completed successfully.
+Setting required flags on partition... OK
+Going to empty the journal ($LogFile)... OK
+Checking the alternate boot sector... OK
+NTFS volume version is 3.1.
+NTFS partition /dev/sda6 was processed successfully.
+[sivakumar66@fedora ~]$ sudo mount -t ntfs-3g -o uid=1000,gid=1000,umask=0000 /dev/sda6 "/run/media/sivakumar66/New Volume"
+[sivakumar66@fedora ~]$ sudo mount -a
+[sivakumar66@fedora ~]$ 
+</code>
+                                </li>
                             </ul>
                         </section>
                     </li>
