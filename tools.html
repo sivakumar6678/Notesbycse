@@ -1,174 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Journal</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles/tools.css">
+  <title>Learning Journal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles/tools.css">
+  <style>
+      body {
+          position: relative; 
+      }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Tools used for development</h1>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
 
-        <section class="html">
-            <h2>Vs code extensions</h2>
-            <div id="accordion">
-                <div class="card">
-                  <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#liverserver">
-                        <dd>Live server</dd>
-                 </a>
-                  </div>
-                  <div id="liverserver" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <dl>used for executing page in broweser automatically with refreshing it and it is access in port <b>5500</b> and it is refreshed by saving file in code.</dl>
-                        <dl>Live Server is a development tool that allows you to create a local web server for your HTML, CSS, and JavaScript files. It automatically refreshes the web page whenever you make changes to your code, providing a seamless development experience. With Live Server, you can view your web page in real-time without having to manually refresh the browser. It is commonly used during web development to speed up the development process and improve productivity. Live Server is easy to set up and can be installed as an extension in popular code editors like Visual Studio Code.</dl>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#livepreview">
-                        <dd>Live Preview</dd>
-                    </a>
-                  </div>
-                  <div id="livepreview" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <dl>It is a microsoft local server which is powerful tools when modifying the changes it will autoamatically refreshing browers without human interaption and it is run in port <b>3000</b> it didnt require saving and refreshing code manually</dl>
-                        <dl>In the context of web development, "Live Preview" refers to a feature that allows developers to see the real-time rendering of their code changes without having to manually refresh the web page. It provides a convenient way to preview and test the appearance and functionality of a web page as you make modifications to the code. This can be especially useful when working on responsive designs or interactive elements. Live Preview typically updates the rendered output as you type or save your changes, providing immediate feedback and speeding up the development process.</dl>                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#endtag">
-                        <dd>HTML End Tag Labels</dd>
-                    </a>
-                  </div>
-                  <div id="endtag" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <dl> It adds labels to the closing tags of HTML elements, making it easier to identify and navigate through the structure of your HTML code. This extension helps improve code readability and reduces the chances of making mistakes when working with complex HTML documents. It is a useful tool for web developers who want to streamline their HTML coding process and ensure well-structured markup. </dl>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                      <a class="collapsed card-link" data-toggle="collapse" href="#highlight">
-                          <dd>Highlight Matching Tag</dd>
-                      </a>
-                    </div>
-                    <div id="highlight" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                          <dl>The "Highlight Matching Tag" feature in HTML is a functionality that visually identifies the opening and closing tags of an HTML element. When you place the cursor on an opening or closing tag, the corresponding tag will be highlighted, making it easier to identify the structure of your HTML code. This feature is particularly useful when working with complex HTML documents that contain nested elements. By highlighting the matching tag, it helps you ensure that your tags are properly balanced and nested correctly. This feature improves code readability and reduces the chances of introducing syntax errors in your HTML markup.</dl>
-                      </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                      <a class="collapsed card-link" data-toggle="collapse" href="#rename">
-                          <dd>Auto Rename Tag</dd>
-                      </a>
-                    </div>
-                    <div id="rename" class="collapse" data-parent="#accordion">
-                      <div class="card-body">
-                          <dl>Auto Rename Tag is a feature in Visual Studio Code that automatically renames the closing tag of an HTML element when you rename the opening tag. This feature helps maintain consistency and accuracy in your HTML code by ensuring that the opening and closing tags are always in sync. When you change the name of an opening tag, the corresponding closing tag is updated automatically to reflect the change. This saves you time and effort by eliminating the need to manually update the closing tag whenever you rename an element. Auto Rename Tag is a useful tool for web developers who want to streamline their coding process and reduce the chances of introducing errors in their HTML markup.</dl>
-                      </div>
-                    </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#rename">
-                        <dd>IntelliSense for CSS class names in HTML</dd>
-                    </a>
-                  </div>
-                  <div id="rename" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <dl>IntelliSense for CSS class names in HTML is a feature in Visual Studio Code that provides automatic suggestions and completion for CSS class names while writing HTML code. It helps developers by offering a list of available class names based on the CSS files included in the project. This feature improves productivity and reduces errors by ensuring that the correct class names are used consistently throughout the codebase. It also promotes code reusability and maintainability by making it easier to reference and apply existing CSS styles.</dl>
-                    </div>
-                  </div>
-              </div>
-                 
-            </div>
-        </section>
-
-        <section class="css">
-            <h1>Css libraries and sitees which we can refer</h1>
-            <div class="list-group">
-              <a href="https://css-tricks.com" class="list-group-item list-group-item-action"> <b> CSS-Tricks</b> </a>
-              <a href="https://freefrontend.com" class="list-group-item list-group-item-action"> <b> FreeFrontend</b></a>
-              <a href="https://uideck.com" class="list-group-item list-group-item-action"> <b> UI Deck</b>  - Free and Premium HTML landing page templates and themes</a>
-              <a href="https://www.frontendmentor.io/" class="list-group-item list-group-item-action"> <b> Frontend Mentor</b> - Improve your coding skills by building realistic projects</a>
-              <a href="https://codepen.io/challenges" class="list-group-item list-group-item-action"> <b> CodePen Challenges</b> </a>
-              <a href="https://Coolors.co" class="list-group-item list-group-item-action"> <b> Coolors</b> - The super fast color palettes generator</a>
-              <a href="https://mycolor.space" class="list-group-item list-group-item-action"> <b> Color Space</b>  - Never waste hours on finding the perfect color palette again</a>
-              <a href="https://cssgradient.io" class="list-group-item list-group-item-action"> <b> CSS Gradient</b>  - Say hello to your AI social designer</a>
-              <a href="https://www.gradientmagic.com" class="list-group-item list-group-item-action"> <b> Gradient Magic</b> </a>
-              <a href="https://www.100dayscss.com" class="list-group-item list-group-item-action"> <b> 100 days CSS</b> </a>
-              <a href="https://www.dailyui.co/" class="list-group-item list-group-item-action"> <b> Daily UI</b> </a>
-              <a href="https://Shots.so" class="list-group-item list-group-item-action"> <b> Shots</b> - Create amazing Mockups</a>
-              <a href="https://Uiverse.io" class="list-group-item list-group-item-action"> <b> Uiverse</b> - Open-Source UI elements for any project</a>
-              <a href="https://Huemint.com" class="list-group-item list-group-item-action"> <b> Huemint</b></a>
-              <a href="https://neat.firecms.co/" class="list-group-item list-group-item-action"><b>NEAT </b> - Neat is a free tool that generates beautiful gradient animations for your website. It's easy to use and offers a wide range of customization options.</a>
-              <a href="https://9elements.github.io/fancy-border-radius/" class="list-group-item list-group-item-action"><b>Fancy-Border-Radius </b>  </a>
-              <a href="https://lordicon.com/" class="list-group-item list-group-item-action"> <b>lordicon</b> to get free and paid icons</a>
-              <a href="https://tobiasahlin.com/spinkit/" class="list-group-item list-group-item-action"><b>spinkit</b> - Make loading animations</a>
-              <a href="https://www.cssfilters.co/" class="list-group-item list-group-item-action"> <b> CSS Filters</b> - Make editing using filters etc</a>
-              <a href="https://www.transition.style/#in:circle:top-right" class="list-group-item list-group-item-action"> <b>Transition CSS</b> - Add different transitions</a>
-              <a href="https://wweb.dev/resources/animated-css-background-generator" class="list-group-item list-group-item-action"> <b>Web Dev animated CSS gradient</b> - Make different animation backgrounds</a>
-              <a href="https://css-generators.com/ribbon-shapes/" class="list-group-item list-group-item-action"> <b>Ribbon Shapes</b> - A tool to generate CSS code for various ribbon shapes, making it easy to create stylish and decorative ribbons for your web projects.</a>
-              <a href="https://picography.co/" class="list-group-item list-group-item-action"><b>Picography</b> - Stunning free stock photos for any project it offers high-resolution photos</a>
-              <a href="https://peepslab.com/" class="list-group-item list-group-item-action"><b>Peepslab</b> - A platform for discovering and sharing design resources and build unique user avatars, including illustrations, icons, and more.</a>
-              <a href="https://iconhunt.site/" class="list-group-item list-group-item-action"><b>IconHunt</b> - A search engine for finding free icons from various sources, making it easy to find the perfect icon for your project.</a>
-              <a href="https://idrawjs.com/" class="list-group-item list-group-item-action"><b>iDraw.js</b> - A lightweight JavaScript library for drawing and editing vector graphics on the web.</a>
-                
-            </div> 
-
-        </section>
-        <section class="javascript">
-            <h1>JavaScript Libraries</h1>
-            <div class="list-group">
-                <a href="https://gsap.com/" class="list-group-item list-group-item-action"> <b>GSAP -</b>  GSAP is the go-to choice for many developers when it comes to animations. with its extensive features and excellent performance, GSAP makes creating complex animations a breeze</a>
-                <a href="https://jquery.com" class="list-group-item list-group-item-action"><b>Jquery -</b> Jquery    </a>
-                <a href="https://threejs.org/" class="list-group-item list-group-item-action"><b>Three js</b>  - While primarily known for 3d graphics. Three.js also packs a punch when i t comes to animations. whether you're working in 2d or 3d, Three.js has you covered with its powerful animations capabilities.</a>
-                <a href="https://animejs.com" class="list-group-item list-group-item-action"><b>Anime js</b>  - if simplicity and flexibility are what you seek, Anime.js is a the way to go . this lightweight library offers a straightforward API for creating smooth animations with ease.</a>
-                <a href="https://d3js.org" class="list-group-item list-group-item-action"><b>D3 js</b> </a>
-                <a href="https://velocity.js" class="list-group-item list-group-item-action"><b>Velocity  -</b>  <i>Need speed? Look no further thatn velocity.js this animation engine is optimized for performance, making it ideal for creating fast and fluid animations in your web projects</i></a>
-        </div>
-        </section>
-        <section class="extensions">
-          <h1>Extensions for Browser for development</h1>
-          <div class="list-group">
-            <a href="https://visbug.web.app/" class="list-group-item list-group-item-action"> <b>VisBug</b>  inspect and modify elements directly on web</a>
-            <a href="https://www.linkresearchtools.com/" class="list-group-item list-group-item-action"> <b>Link Redirect trace</b>  To identify any issue with redirection that can afect performance</a>
-            <a href="https://chrispederick.com/" class="list-group-item list-group-item-action"> <b>Web developer</b> To identify potential issues based on SEO security etc </a>
-            <a href="https://palette.site/" class="list-group-item list-group-item-action"> <b>Site Palette</b> To get color palette of any site to decide the one for you  </a>
-            <a href="https://responsiveviewer.org/" class="list-group-item list-group-item-action"> <b>Responsive viewer</b> To test responsive design on various devices  </a>
-
-          </div>
-        </section>
-        <section class="someextratools">
-          <h1>Development tools</h1>
-          <a href="https://www.sejda.com/" class="list-group-item list-group-item-action"><b>Sedja pdf</b> Edit pdf for free </a>
-        </section>
-        <section class="sitesforportfolio">
-          <h1>Portfolio sites </h1>
-          <a href="https://carbonmade.com/" class="list-group-item list-group-item-action"> <b>Carbonmade</b></a>
-          <a href="https://www.journoportfolio.com/" class="list-group-item list-group-item-action"><b>Journo Portfolio</b></a>
-          <a href="https://www.coroflot.com/" class="list-group-item list-group-item-action"><b>CoroFlot</b></a>
-          <a href="https://www.portfoliobox.net/" class="list-group-item list-group-item-action"><b>Portfolio Box</b></a>
-        </section>
-        <section class="mockinterview">
-          <h1>Mock interview preparation tools </h1>
-          <a href="https://www.interviewbit.com/" class="list-group-item list-group-item-action"><b>interviewbit</b></a>
-          <a href="https://www.pramp.com/#/" class="list-group-item list-group-item-action"><b>Pramp</b></a>
-          <a href="https://interviewing.io/" class="list-group-item list-group-item-action"><b>interviewing</b></a>
-        </section>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="navbarNav">  
+  <a class="navbar-brand" href="#">Learning Journal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#vs-code-extensions">VS Code Extensions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#css-tools">CSS Tools</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#design-challenges">Design Challenges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#ui-design">UI Design Resources</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#javascript-libraries">JavaScript Libraries</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#extensions">Browser Extensions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#development-tools">Development Tools</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio-sites">Portfolio Sites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#mock-interview">Mock Interview Tools</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="vs-code-extensions" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h2>VS Code Extensions</h2>
+  <div id="accordion">
+    <!-- Live Server -->
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#liverserver">Live Server</a>
       </div>
+      <div id="liverserver" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          <p>Used for executing pages in the browser automatically with refreshing, accessible on port <b>5500</b>, and it is refreshed by saving files in code.</p>
+          <p>Live Server is a development tool that allows you to create a local web server for your HTML, CSS, and JavaScript files. It automatically refreshes the web page whenever you make changes to your code, providing a seamless development experience.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Live Preview -->
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#livepreview">Live Preview</a>
+      </div>
+      <div id="livepreview" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p>It is a Microsoft local server, which automatically refreshes browsers without manual intervention. Runs on port <b>3000</b> without the need for saving and refreshing code manually.</p>
+          <p>In the context of web development, "Live Preview" refers to a feature that allows developers to see the real-time rendering of their code changes without having to manually refresh the web page.</p>
+        </div>
+      </div>
+    </div>
+    <!-- HTML End Tag Labels -->
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#endtag">HTML End Tag Labels</a>
+      </div>
+      <div id="endtag" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p>This extension adds labels to the closing tags of HTML elements, making it easier to identify and navigate through the structure of your HTML code.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Highlight Matching Tag -->
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#highlight">Highlight Matching Tag</a>
+      </div>
+      <div id="highlight" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p>The "Highlight Matching Tag" feature in HTML visually identifies the opening and closing tags of an HTML element.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Auto Rename Tag -->
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#rename">Auto Rename Tag</a>
+      </div>
+      <div id="rename" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p>Auto Rename Tag automatically renames the closing tag when you rename the opening tag in HTML.</p>
+        </div>
+      </div>
+    </div>
+    <!-- IntelliSense for CSS class names in HTML -->
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#intellisense">IntelliSense for CSS Class Names in HTML</a>
+      </div>
+      <div id="intellisense" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p>IntelliSense provides automatic suggestions and completion for CSS class names while writing HTML code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="css-tools" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h2>CSS Tools</h2>
+
+  <h3>General CSS Libraries and Sites</h3>
+  <div class="list-group">
+    <a href="https://css-tricks.com/" class="list-group-item list-group-item-action"><b>CSS-Tricks</b> - Comprehensive CSS tips, tutorials, and examples.</a>
+    <a href="https://freefrontend.com/" class="list-group-item list-group-item-action"><b>FreeFrontend</b> - A collection of free front-end resources, snippets, and tools.</a>
+    <a href="https://uideck.com/" class="list-group-item list-group-item-action"><b>UI Deck</b> - Free and premium HTML templates and themes.</a>
+    <a href="https://frontendmentor.io/" class="list-group-item list-group-item-action"><b>Frontend Mentor</b> - Real-world coding challenges to improve your skills.</a>
+    <a href="https://codepen.io/challenges" class="list-group-item list-group-item-action"><b>CodePen Challenges</b> - Weekly challenges to practice front-end skills.</a>
+    <a href="https://100dayscss.com/" class="list-group-item list-group-item-action"><b>100 Days CSS</b> - Learn CSS by building animations and designs daily.</a>
+    <a href="https://dailyui.co/" class="list-group-item list-group-item-action"><b>Daily UI</b> - Daily user interface design challenges for inspiration and learning.</a>
+  </div>
+
+  <h3>Color Tools</h3>
+  <div class="list-group">
+    <a href="https://coolors.co/" class="list-group-item list-group-item-action"><b>Coolors</b> - A fast and easy color palette generator.</a>
+    <a href="https://mycolor.space/" class="list-group-item list-group-item-action"><b>Color Space</b> - Discover and generate perfect color palettes.</a>
+    <a href="https://cssgradient.io/" class="list-group-item list-group-item-action"><b>CSS Gradient</b> - Create beautiful CSS gradients.</a>
+    <a href="https://gradientmagic.com/" class="list-group-item list-group-item-action"><b>Gradient Magic</b> - Generate unique and creative gradients.</a>
+    <a href="https://huemint.com/" class="list-group-item list-group-item-action"><b>Huemint</b> - AI-powered color palette creator for designs.</a>
+  </div>
+
+  <h3>Animations and Transitions</h3>
+  <div class="list-group">
+    <a href="https://tobiasahlin.com/spinkit/" class="list-group-item list-group-item-action"><b>Spinkit</b> - Create simple and stylish CSS loading animations.</a>
+    <a href="https://www.transition.style/#in:circle:top-right" class="list-group-item list-group-item-action"><b>Transition CSS</b> - Generate custom CSS transitions.</a>
+    <a href="https://wweb.dev/resources/animated-css-background-generator" class="list-group-item list-group-item-action"><b>Web Dev Animated CSS Gradient</b> - Create animated CSS gradient backgrounds.</a>
+    <a href="https://neatcss.com/" class="list-group-item list-group-item-action"><b>NEAT</b> - Generate beautiful gradient animations easily.</a>
+  </div>
+
+  <h3>Shapes, Filters, and Effects</h3>
+  <div class="list-group">
+    <a href="https://9elements.github.io/fancy-border-radius/" class="list-group-item list-group-item-action"><b>Fancy Border Radius</b> - Create complex and stylish border radius designs.</a>
+    <a href="https://www.cssfilters.co/" class="list-group-item list-group-item-action"><b>CSS Filters</b> - Apply creative filter effects to your CSS designs.</a>
+    <a href="https://www.ribbonshapes.com/" class="list-group-item list-group-item-action"><b>Ribbon Shapes</b> - Generate CSS code for decorative ribbon shapes.</a>
+  </div>
+
+  <h3>Icons and SVG Tools</h3>
+  <div class="list-group">
+    <a href="https://lordicon.com/" class="list-group-item list-group-item-action"><b>Lordicon</b> - Free and premium animated icons.</a>
+    <a href="https://iconhunt.site/" class="list-group-item list-group-item-action"><b>IconHunt</b> - Search engine for free and high-quality icons.</a>
+    <a href="https://www.svgrepo.com/" class="list-group-item list-group-item-action"><b>SVG Repo</b> - A library of free SVG illustrations and icons.</a>
+    <a href="https://idraw.js.org/" class="list-group-item list-group-item-action"><b>iDraw.js</b> - Draw and edit vector graphics using JavaScript.</a>
+  </div>
+
+  <!-- Design Mockups and Inspirations -->
+  <h3>Design Mockups and Inspirations</h3>
+  <div class="list-group">
+      <a href="https://shotsnapp.com/" class="list-group-item list-group-item-action"><b>Shots</b> - Create stunning mockups for your designs.</a>
+      <a href="https://uiverse.io/" class="list-group-item list-group-item-action"><b>Uiverse</b> - Free and open-source UI elements for your projects.</a>
+      <a href="https://picography.co/" class="list-group-item list-group-item-action"><b>Picography</b> - Free high-resolution stock photos for any project.</a>
+      <a href="https://peepslab.com/" class="list-group-item list-group-item-action"><b>Peepslab</b> - Discover and share design resources like user avatars and illustrations.</a>
+  </div>
+</div>
+
+<div id="design-challenges" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h2>Design Challenges and Inspirations</h2>
+  <div class="list-group">
+    <a href="https://frontendmentor.io" class="list-group-item list-group-item-action"><b>Frontend Mentor</b> - Practice real-world projects with challenges.</a>
+    <a href="https://dribbble.com" class="list-group-item list-group-item-action"><b>Dribbble</b> - Design inspiration and creative community.</a>
+    <a href="https://www.behance.net/" class="list-group-item list-group-item-action"><b>Behance</b> - Showcasing creative work and inspiring portfolios.</a>
+  </div>
+</div>
+
+<div id="ui-design" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h2>UI Design Resources</h2>
+  <div class="list-group">
+    <a href="https://www.material.io/" class="list-group-item list-group-item-action"><b>Material Design</b> - Google's design system for building intuitive interfaces.</a>
+    <a href="https://design.google.com/icons/" class="list-group-item list-group-item-action"><b>Google Material Icons</b> - A collection of consistent icons for UI designs.</a>
+  </div>
+</div>
+
+<div id="javascript-libraries" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h1 id="javascript-libraries">JavaScript Libraries</h1>
+  <div class="list-group">
+    <a href="https://gsap.com/" class="list-group-item list-group-item-action"><b>GSAP</b> - Powerful animations for web developers.</a>
+    <a href="https://jquery.com" class="list-group-item list-group-item-action"><b>JQuery</b> - Simplify JavaScript with this fast, feature-rich library.</a>
+    <a href="https://threejs.org/" class="list-group-item list-group-item-action"><b>Three.js</b> - 3D graphics and animation library for the web.</a>
+    <a href="https://animejs.com" class="list-group-item list-group-item-action"><b>Anime.js</b> - Lightweight and flexible animations for the web.</a>
+    <a href="https://d3js.org" class="list-group-item list-group-item-action"><b>D3.js</b> - Create data-driven documents using JavaScript.</a>
+    <a href="https://velocity.js" class="list-group-item list-group-item-action"><b>Velocity.js</b> - Optimized animation engine for fast and fluid animations.</a>
+  </div>
+</div>
+
+<div id="extensions" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h1 id="extensions">Extensions for Browser Development</h1>
+  <div class="list-group"></div>
+    <a href="https://visbug.web.app/" class="list-group-item list-group-item-action"><b>VisBug</b> - Inspect and modify elements directly on web.</a>
+    <a href="https://www.linkresearchtools.com/" class="list-group-item list-group-item-action"><b>Link Redirect Trace</b> - Identify redirection issues affecting performance.</a>
+    <a href="https://chrispederick.com/" class="list-group-item list-group-item-action"><b>Web Developer</b> - Identify potential issues based on SEO, security, etc.</a>
+    <a href="https://palette.site/" class="list-group-item list-group-item-action"><b>Site Palette</b> - Get color palettes from any site.</a>
+    <a href="https://responsiveviewer.org/" class="list-group-item list-group-item-action"><b>Responsive Viewer</b> - Test responsive design on various devices.</a>
+  </div>
+</div>
+
+<div id="development-tools" class="container  " style="padding-top:70px;padding-bottom:70px">
+  <h1 id="development-tools">Development Tools</h1>
+  <a href="https://www.sejda.com/" class="list-group-item list-group-item-action"><b>Sejda PDF</b> - Edit PDFs online for free.</a>
+</div>
+
+<div id="portfolio-sites" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h1 id="portfolio-sites">Portfolio Sites</h1>
+  <a href="https://carbonmade.com/" class="list-group-item list-group-item-action"><b>Carbonmade</b> - Create a beautiful portfolio site easily.</a>
+  <a href="https://www.journoportfolio.com/" class="list-group-item list-group-item-action"><b>Journo Portfolio</b> - Design-focused portfolio site for creatives.</a>
+  <a href="https://www.coroflot.com/" class="list-group-item list-group-item-action"><b>CoroFlot</b> - Portfolio site for creative professionals.</a>
+  <a href="https://www.portfoliobox.net/" class="list-group-item list-group-item-action"><b>Portfolio Box</b> - Build and customize your portfolio site with ease.</a>
+</div>
+
+<div id="mock-interview" class="container " style="padding-top:70px;padding-bottom:70px">
+  <h1 id="mock-interview">Mock Interview Preparation Tools</h1>
+  <a href="https://www.interviewbit.com/" class="list-group-item list-group-item-action"><b>InterviewBit</b> - Platform for practicing technical interview problems.</a>
+  <a href="https://www.pramp.com/#/" class="list-group-item list-group-item-action"><b>Pramp</b> - Practice real-time interviews with peers.</a>
+  <a href="https://interviewing.io/" class="list-group-item list-group-item-action"><b>Interviewing.io</b> - Anonymous mock interviews with engineers from top tech companies.</a>
+</div>
+
+
 </body>
 </html>
